@@ -1,7 +1,7 @@
 import { useState } from "react";
 import randColor from "../../Functions/randColor";
 
-function Small({side, sc, top}) {
+function Small({side, sc, top, border}) {
 
     const [color, setColor] = useState(null);
 
@@ -15,7 +15,8 @@ function Small({side, sc, top}) {
                 left: side === 'left' ? '-10px' : null,
                 right: side === 'right' ? '-10px' : null,
                 top: top + 'px',
-                backgroundColor: color
+                backgroundColor: color,
+                borderWidth: border + 'px'
             }
         }></div>
     )
