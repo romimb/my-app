@@ -1,12 +1,11 @@
-import rand from "../../Function/rand";
+import rand from '../../Functions/rand';
 
 function Meska() {
-    return <h2 style={
+    return <h3 style={
         {
-            color: rand(0,1) ? 'red' : 'blue'
+            color: rand(0, 1) ? 'red' : 'blue'
         }
-    }>Ir atėjo meška <br /> Šiaurinė meška <br />Balta kaip sniegas</h2>;
-    
+    }>Aš meška, o kas tu?</h3>
 }
 
 export default Meska;

@@ -1,15 +1,14 @@
-import randColor from "../../Function/randColor";
+import randColor from "../../Functions/randColor";
 
 function Kates() {
+
     return (
-    <ul style={{
-        color: randColor()
-    }} className="kates">
-        <li>Murka</li>
-        <li>Kaukė</li>
-        <li>Miknė</li>
-    </ul>
-    );
+        <ul className="katinai" style={{color: randColor() }}>
+            <li>Murka</li>
+            <li>Pilkis</li>
+            <li>Pacukas</li>
+        </ul>
+    )
 }
 
 export default Kates;
