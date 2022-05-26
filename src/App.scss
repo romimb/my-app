@@ -74,10 +74,7 @@
     border: 1px solid gray;
 }
 
-h3 {
-    color: pink;
-    color: darkmagenta
-}
+
 
 .rcolor {
     width: 100vw;
@@ -138,7 +135,7 @@ h3 {
 // BUTTON
 $color: rgb(11, 88, 107);
 
-button {
+button.a {
     display: inline-block;
     padding: .75rem 1.25rem;
     border-radius: 10rem;
@@ -286,5 +283,27 @@ button {
         &.c1 {
             border-radius: 50%;
         }
+    }
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.lc {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    .list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 10px;
     }
 }

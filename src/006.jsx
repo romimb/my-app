@@ -31,7 +31,7 @@ function App() {
         <Kvadratas spalva2="pink" spalva1="gray" show="apelsinas"></Kvadratas> */}
         <div className="letters">
         {
-            labas.map((l, i) => <Raide key={i} l={l}></Raide>)
+            labas.map((l, i) => <Raide key={i} l={l} i={i}></Raide>)
         }
         </div>
       </header>

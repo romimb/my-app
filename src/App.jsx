@@ -1,49 +1,78 @@
 import './App.scss';
-import Button from './Components/008/Button';
-import MrGreen from './Components/008/MrGreen';
-import {useState} from 'react';
-import Square from './Components/008/Square';
-
+import { useState } from 'react';
+import Hello from './Components/014/Hello';
+import Lists from './Components/014/Lists';
 function App() {
 
-    const [mrGreen, setMrGreen] = useState('green');
-    const [nr, setNr] = useState(1);
-    const [red, setRed] = useState(false);
-    const [srs, setSrs] = useState([]);
+    const [ate, setAte] = useState('');
+    const [color, setColor] = useState('white');
 
-    const clickButton = () => {
-        setMrGreen(s => s ==='pink' ? 'green' : 'pink');
+    const [red, setRed] = useState('white');
+    const [africa, setAfrica] = useState('');
+
+    const labas = () => {
+        console.log('Labukas!');
     }
 
-    const clickPlus = () => {
-        setNr(n => n + (red ? - 1 : 1));
+    const showAte = () => {
+        setAte('Ate');
     }
 
-    const clickRed = () => setRed(r => !r);
+    const hideAte = () => {
+        setAte('');
+        setColor('white');
+    }
 
-    const clickAddSrs = () => setSrs(s => [...s, 1]);
-    const clickRemSrs = () => setSrs(s => s.slice(1));
+    const hideShowAte = () => {
+        // setAte(a => a ? '' : 'Ate');
+        setAte(a => a === 'Ate' ? '' : 'Ate');
+    }
+
+    const makeRed = () => {
+        setColor('crimson');
+     }
+
+    const makeH3Red = () => {
+        setRed('crimson');
+    }
+
+    const sayAfrica = () => {
+        setAfrica('Africa');
+    }
+
+    const reset = () => {
+        setRed('white');
+        setAfrica('');
+    }
+
+    const makeGreen = () => {
+        setColor('green');
+    }
+
 
     return (
         <div className="App">
             <header className="App-header">
-                <h1>Uplifting <span style={
-                    {
-                        color:mrGreen,
-                        backgroundColor: red ? 'red' : null,
-                        padding: '7px'
-                    }
-                    }>{nr}</span></h1>
-                <Button clickRemSrs={clickRemSrs} clickAddSrs={clickAddSrs} clickRed={clickRed} clickButton={clickButton} clickPlus={clickPlus}></Button>
-                <MrGreen mrGreen={mrGreen}></MrGreen>
-                <div className="square-garden">
-                    {
-                      srs.map((_,i) => <Square which={i} key={i}></Square>)  
-                    }
+                <h1>REPEAT</h1>
+                <Lists></Lists>
+                {/* <Hello red={red} africa={africa} makeGreen={makeGreen}></Hello>
+                <h2 style={{color:color}}>{ate}</h2>
+                <div className="sqc">
+                    <button className="a" onClick={labas}>Labas</button>
+                    <button className="a" onClick={showAte}>Say Ate</button>
+                    <button className="a" onClick={hideAte}>No Ate</button>
+                    <button className="a" onClick={hideShowAte}>No / Ate</button>
                 </div>
+                <div className="sqc">
+                    <button className="a" onClick={makeRed}>RED</button>
+                    <button className="a" onClick={makeH3Red}>H3 RED</button>
+                    <button className="a" onClick={sayAfrica}>H3 Africa</button>
+                    <button className="a" onClick={reset}>H3 Reset</button>
+                </div> */}
             </header>
         </div>
     );
+
 }
 
 export default App;
