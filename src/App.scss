@@ -32,7 +32,6 @@
     from {
         transform: rotate(0deg);
     }
-
     to {
         transform: rotate(360deg);
     }
@@ -74,8 +73,6 @@
     border: 1px solid gray;
 }
 
-
-
 .rcolor {
     width: 100vw;
     height: 33px;
@@ -106,7 +103,6 @@
     flex-wrap: wrap;
     margin: 20px;
     width: 100%;
-
     .sq {
         width: 50px;
         height: 50px;
@@ -117,15 +113,12 @@
         font-weight: bold;
         background-color: grey;
         margin: 7px;
-
         &.blue {
             background-color: #61dafb;
         }
-
         &.pink {
             background-color: pink;
         }
-
         &.red {
             background-color: crimson;
         }
@@ -134,7 +127,6 @@
 
 // BUTTON
 $color: rgb(11, 88, 107);
-
 button.a {
     display: inline-block;
     padding: .75rem 1.25rem;
@@ -150,7 +142,6 @@ button.a {
     cursor: pointer;
     margin: 7px;
     border: 1px solid $color;
-
     &:after {
         content: '';
         position: absolute;
@@ -162,7 +153,6 @@ button.a {
         border-radius: 10rem;
         z-index: -2;
     }
-
     &:before {
         content: '';
         position: absolute;
@@ -175,10 +165,8 @@ button.a {
         border-radius: 10rem;
         z-index: -1;
     }
-
     &:hover {
         color: #fff;
-
         &:before {
             width: 100%;
         }
@@ -203,16 +191,13 @@ button.a {
     height: 400px;
     transition: all 0.7s;
     position: relative;
-
     .kvadratas {
         width: 100px;
         height: 100px;
     }
-
     .apskritimas {
         border-radius: 50%;
     }
-
     &.blue {
         background-color: blue;
     }
@@ -222,7 +207,6 @@ button.a {
     display: flex;
     justify-content: center;
     align-items: center;
-
     span {
         display: flex;
         justify-content: center;
@@ -264,13 +248,12 @@ button.a {
     border: 1px solid snow;
 }
 
-.square-garden {
+.kvc {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-
-    .small-red-square {
+    .kv {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -279,7 +262,6 @@ button.a {
         height: 77px;
         background-color: crimson;
         margin: 8px;
-
         &.c1 {
             border-radius: 50%;
         }
@@ -298,12 +280,44 @@ button.a {
     width: 100%;
     justify-content: center;
     align-items: center;
-
     .list {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         margin: 10px;
+        div {
+            margin: 3px;
+            transition: all 0.6s;
+            cursor: pointer;
+            padding: 5px 10px;
+            &:hover {
+                background-color: gray;
+            }
+            span {
+                padding: 0 15px;
+                font-weight: bold;
+                letter-spacing: 0.7px;
+            }
+        }
     }
+}
+
+.list-group-item {
+    .item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        .buttons {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+    }
+}
+
+.modal {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
 }
